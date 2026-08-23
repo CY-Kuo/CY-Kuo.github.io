@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MAPS manual-guided assembly-part segmentation project by Chia Ying Kuo.">
+  <title>MAPS | Chia Ying Kuo</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Chia Ying Kuo</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Primary navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="https://github.com/CY-Kuo" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=hWQJ84wAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container project-hero-grid">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="eyebrow">Computer Vision · Robotic Assembly</p>
+      <h1>MAPS: Manual-Guided Assembly-Part Segmentation</h1>
+      <p class="project-lede">MAPS is a <strong>manual-guided vision framework</strong> for segmenting assembly parts under clutter and occlusion. It combines a camera image with the aligned 2D assembly-manual step as structural guidance, without requiring CAD or depth at deployment.</p>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Project Overview</p>
+        <h2>Manual-derived structural guidance for camera-view segmentation</h2>
+      </div>
+      <p class="large-copy">The framework uses a YOLO11s-seg camera/student branch together with a frozen manual/teacher branch and injects manual-derived structural guidance through feature fusion and an auxiliary mask prior.</p>
+      <div class="overview-figure">
+        <figure><img src="https://raw.githubusercontent.com/CY-Kuo/manual-guided-assembly-part-segmentation/main/assets/method_overview.png" alt="MAPS end-to-end method overview"><figcaption>MAPS end-to-end method overview</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Project Highlights</h2>
+      <div class="highlight-list">
+        <article><h3>Camera / student branch</h3><p>Uses a YOLO11s-seg camera/student branch together with a frozen manual/teacher branch.</p></article>
+        <article><h3>Teacher–student distillation</h3><p>Distillation transfers knowledge from the frozen manual-image teacher to the camera-image student during training.</p></article>
+        <article><h3>Structural guidance</h3><p>Injects manual-derived structural guidance through feature fusion and an auxiliary mask prior.</p></article>
+        <article><h3>Mask refinement</h3><p>Uses that prior to filter and refine camera-view instance masks rather than replacing the detector output.</p></article>
+        <article><h3>2D deployment inputs</h3><p>Operates from 2D camera and manual inputs without requiring CAD or depth at deployment.</p></article>
+      </div>
+      <div class="metric-grid project-metrics">
+        <article><strong>+10.4% Dice</strong><span>relative to the camera-only baseline</span></article>
+        <article><strong>+16.7% IoU</strong><span>relative to the camera-only baseline</span></article>
+        <article><strong>+91.1% BoundaryF</strong><span>relative to the camera-only baseline</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Demonstration</p>
+        <h2>Qualitative segmentation results</h2>
+      </div>
+      <div class="media-grid one full-media">
+        <figure><img src="https://raw.githubusercontent.com/CY-Kuo/manual-guided-assembly-part-segmentation/main/assets/qualitative_results.png" alt="MAPS qualitative segmentation results"><figcaption>Representative visual comparisons across assembly scenes with clutter, occlusion, and varying object visibility.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="technology-title">Technologies Used</h2>
+      <div class="technology-cards" aria-label="Technology list">
+        <span>Python</span><span>PyTorch</span><span>YOLO11s-seg</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <h2 class="section-title">Publication &amp; Code</h2>
+      <p class="large-copy">The public repository is a cleaned research-code companion to the published paper. Model weights and third-party data are not distributed there.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/CY-Kuo/manual-guided-assembly-part-segmentation" target="_blank" rel="noreferrer">View GitHub</a>
+        <a class="button" href="https://doi.org/10.1007/s00170-026-18468-w" target="_blank" rel="noreferrer">View Paper</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-next">
+    <div class="container">
+      <p class="eyebrow">Explore More</p>
+      <div class="next-links">
+        <a href="connector-aware.html"><span>Robotic Assembly</span><strong>Connector-Aware Robotic Assembly →</strong></a>
+        <a href="wireless-sensing.html"><span>Embedded Systems</span><strong>Real-Time Wearable Sensing System →</strong></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-row"><span>© <span data-year></span> Chia Ying Kuo</span><span>Research &amp; engineering portfolio</span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
