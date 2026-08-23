@@ -1,0 +1,40 @@
+name: Copy Connector-Aware media
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  copy-media:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download demonstration GIFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/media/connector-aware
+          base="https://raw.githubusercontent.com/CY-Kuo/connector-aware-robotic-assembly/main/media"
+          curl -L --fail "$base/isaac_sim/sundvik_15sec.gif" -o assets/media/connector-aware/sundvik_15sec.gif
+          curl -L --fail "$base/isaac_sim/vasskar_6sec.gif" -o assets/media/connector-aware/vasskar_6sec.gif
+          curl -L --fail "$base/isaac_sim/desk_assembly_17sec.gif" -o assets/media/connector-aware/desk_assembly_17sec.gif
+          curl -L --fail "$base/isaac_sim/round_table_assembly_7sec.gif" -o assets/media/connector-aware/round_table_assembly_7sec.gif
+          curl -L --fail "$base/robot/robot_implementation_6sec.gif" -o assets/media/connector-aware/robot_implementation_6sec.gif
+          test -s assets/media/connector-aware/sundvik_15sec.gif
+          test -s assets/media/connector-aware/vasskar_6sec.gif
+          test -s assets/media/connector-aware/desk_assembly_17sec.gif
+          test -s assets/media/connector-aware/round_table_assembly_7sec.gif
+          test -s assets/media/connector-aware/robot_implementation_6sec.gif
+      - name: Commit media
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/media/connector-aware
+          git diff --cached --quiet && exit 0
+          git commit -m "Add Connector-Aware demonstration media"
+          git push
