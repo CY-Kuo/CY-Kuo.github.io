@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Real-Time Wearable Sensing System project by Chia Ying Kuo.">
+  <title>Real-Time Wearable Sensing System | Chia Ying Kuo</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Chia Ying Kuo</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Primary navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="https://github.com/CY-Kuo" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=hWQJ84wAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container project-hero-grid">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="eyebrow">Embedded Sensing · Communication · Visualization</p>
+      <h1>Real-Time Wearable Sensing System</h1>
+      <p class="project-lede">An end-to-end wearable sensing prototype integrating <strong>pressure and IMU acquisition</strong>, wireless <strong>WebSocket</strong> communication, concurrent <strong>Node.js</strong> processing, and browser-based live visualization.</p>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Project Overview</p>
+        <h2>Embedded sensing to browser visualization</h2>
+      </div>
+      <p class="large-copy">The system was designed to collect multi-channel foot-pressure and inertial data from wearable sensor nodes and stream them to a central server for storage, monitoring, and downstream analysis.</p>
+      <div class="workflow" aria-label="Wearable sensing data flow">
+        <span>Pressure sensors + IMU</span><b aria-hidden="true">→</b>
+        <span>Arduino acquisition</span><b aria-hidden="true">→</b>
+        <span>Wi-Fi / WebSocket</span><b aria-hidden="true">→</b>
+        <span>Node.js server</span><b aria-hidden="true">→</b>
+        <span>Local data storage + browser dashboard</span>
+      </div>
+      <div class="overview-figure architecture-figure">
+        <figure><img src="https://raw.githubusercontent.com/CY-Kuo/real-time-wearable-sensing/main/assets/system_architecture.png" alt="Wearable sensing system architecture"><figcaption>System architecture</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Project Highlights</h2>
+      <div class="highlight-list">
+        <article><h3>Embedded acquisition</h3><p>Developed Arduino/C++ firmware for three pressure-sensor channels and IMU acquisition.</p></article>
+        <article><h3>Wireless streaming</h3><p>Streamed timestamped sensor measurements over Wi-Fi using WebSocket communication.</p></article>
+        <article><h3>Concurrent server</h3><p>Built a concurrent Node.js server using the <code>cluster</code> module and multi-process workers for sensor connections and browser control.</p></article>
+        <article><h3>Routing &amp; storage</h3><p>Implemented routing and storage for up to four sensor labels (A1–A4) using NeDB.</p></article>
+        <article><h3>Live dashboard</h3><p>Added browser-based START/STOP control and live pressure/acceleration visualization with Chart.js.</p></article>
+        <article><h3>Data tooling</h3><p>Built supporting Python tooling for exporting stored measurements for offline analysis.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Demonstration</p>
+        <h2>Wearable sensing prototype</h2>
+      </div>
+      <div class="media-grid one full-media">
+        <figure><img src="https://raw.githubusercontent.com/CY-Kuo/real-time-wearable-sensing/main/assets/system_demo.png" alt="Wearable sensing prototype"><figcaption>Wearable sensing prototype</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="technology-title">Technologies Used</h2>
+      <div class="technology-cards" aria-label="Technology list">
+        <span>Arduino/C++</span><span>WiFiNINA</span><span>MKR IMU</span><span>Node.js</span><span>Express</span><span>WebSocket</span><span>NeDB</span><span>JavaScript</span><span>HTML/CSS</span><span>Chart.js</span><span>Python</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <h2 class="section-title">Publication &amp; Code</h2>
+      <p class="large-copy">The wireless sensing and real-time monitoring workflow represented in this project supported the gait-monitoring experiments reported in the related Communications Materials publication.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/CY-Kuo/real-time-wearable-sensing" target="_blank" rel="noreferrer">View GitHub</a>
+        <a class="button" href="https://www.nature.com/articles/s43246-024-00570-9" target="_blank" rel="noreferrer">View Publication</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-next">
+    <div class="container">
+      <p class="eyebrow">Explore More</p>
+      <div class="next-links">
+        <a href="connector-aware.html"><span>Robotic Assembly</span><strong>Connector-Aware Robotic Assembly →</strong></a>
+        <a href="maps.html"><span>Computer Vision</span><strong>MAPS: Manual-Guided Assembly-Part Segmentation →</strong></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-row"><span>© <span data-year></span> Chia Ying Kuo</span><span>Research &amp; engineering portfolio</span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
