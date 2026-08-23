@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Connector-Aware Robotic Assembly project by Chia Ying Kuo.">
+  <title>Connector-Aware Robotic Assembly | Chia Ying Kuo</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Chia Ying Kuo</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Primary navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="https://github.com/CY-Kuo" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=hWQJ84wAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container project-hero-grid">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="eyebrow">Robotic Assembly · Simulation · Physical Execution</p>
+      <h1>Connector-Aware Robotic Assembly</h1>
+      <p class="project-lede">A geometry-aware robotic assembly framework that reasons from <strong>individual CAD/mesh parts</strong> to generate assembly plans, validate assembly sequences and motions in <strong>NVIDIA Isaac Sim</strong>, and transfer validated results to a <strong>physical robot system</strong>.</p>
+      <div class="status-chip">Manuscript under review.</div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Project Overview</p>
+        <h2>From part geometry to executable assembly</h2>
+      </div>
+      <p class="large-copy">Rather than assuming a fully assembled product model or a pre-defined mating sequence, the workflow builds an assembly plan from available part geometry, generates assembly poses and motions, checks the resulting sequence in simulation, and uses the validated motion information for robot execution.</p>
+      <div class="workflow" aria-label="Connector-aware assembly workflow">
+        <span>Individual CAD / Mesh Parts</span><b aria-hidden="true">→</b>
+        <span>Connector-Aware Assembly Reasoning</span><b aria-hidden="true">→</b>
+        <span>Assembly Planning</span><b aria-hidden="true">→</b>
+        <span>Pose &amp; Motion Generation</span><b aria-hidden="true">→</b>
+        <span>Isaac Sim Validation</span><b aria-hidden="true">→</b>
+        <span>Physical Robot Execution</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Project Highlights</h2>
+      <div class="highlight-list">
+        <article><h3>Geometry-first assembly reasoning</h3><p>Assembly reasoning from individual CAD/mesh parts.</p></article>
+        <article><h3>Connector-aware planning</h3><p>Connector-aware planning for assembly reasoning from part geometry.</p></article>
+        <article><h3>Assembly pose and motion generation</h3><p>Pose and motion generation for representative mating operations.</p></article>
+        <article><h3>Sequence-level validation</h3><p>Validation of the assembly sequence before physical execution.</p></article>
+        <article><h3>NVIDIA Isaac Sim</h3><p>Assembly-sequence and mating-motion simulation.</p></article>
+        <article><h3>Physical robot demonstrations</h3><p>Validation of transfer from planning and simulation to hardware.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Demonstration</p>
+      </div>
+      <div class="demo-block">
+        <div class="demo-copy"><h3>Sequence Feasibility Validation</h3><p>Representative sequence-level simulations for products from the Manual2Skill++ benchmark.</p></div>
+        <div class="media-grid two">
+          <figure><img src="../assets/media/connector-aware/sundvik_15sec.gif" alt="SUNDVIK sequence feasibility simulation"><figcaption>SUNDVIK</figcaption></figure>
+          <figure><img src="../assets/media/connector-aware/vasskar_6sec.gif" alt="VASSKAR sequence feasibility simulation"><figcaption>VASSKAR</figcaption></figure>
+        </div>
+      </div>
+      <div class="demo-block">
+        <div class="demo-copy"><h3>Mating Motion Simulation</h3><p>Representative local assembly-motion simulations for FurnitureBench products, showing how planned mating operations are executed in Isaac Sim.</p></div>
+        <div class="media-grid two">
+          <figure><img src="../assets/media/connector-aware/desk_assembly_17sec.gif" alt="Desk mating motion simulation"><figcaption>Desk</figcaption></figure>
+          <figure><img src="../assets/media/connector-aware/round_table_assembly_7sec.gif" alt="Round Table mating motion simulation"><figcaption>Round Table</figcaption></figure>
+        </div>
+      </div>
+      <div class="demo-block">
+        <div class="demo-copy"><h3>Physical Robot Execution</h3><p>A representative hardware demonstration showing transfer of planned assembly motion from the reasoning and simulation workflow to a physical robot system.</p></div>
+        <div class="media-grid one">
+          <figure><img src="../assets/media/connector-aware/robot_implementation_6sec.gif" alt="Physical robot execution demonstration"><figcaption>Physical robot demonstration</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="technology-title">Technologies Used</h2>
+      <div class="technology-cards" aria-label="Technology list">
+        <span>Python</span><span>NVIDIA Isaac Sim</span><span>USD / PhysX simulation workflow</span><span>CAD and mesh geometry processing</span><span>OpenCV / visualization utilities</span><span>Robot kinematics and coordinate transformations</span><span>Robotic assembly planning and validation</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <h2 class="section-title">Publication &amp; Code</h2>
+      <p class="large-copy"><strong>Manuscript under review.</strong> Implementation details, source code, decision rules, thresholds, and other unpublished methodological details are intentionally withheld while the associated manuscript is under review.</p>
+    </div>
+  </section>
+
+  <section class="project-next">
+    <div class="container">
+      <p class="eyebrow">Explore More</p>
+      <div class="next-links">
+        <a href="maps.html"><span>Computer Vision</span><strong>MAPS: Manual-Guided Assembly-Part Segmentation →</strong></a>
+        <a href="wireless-sensing.html"><span>Embedded Systems</span><strong>Real-Time Wearable Sensing System →</strong></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-row"><span>© <span data-year></span> Chia Ying Kuo</span><span>Research &amp; engineering portfolio</span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
