@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Machine Vision + PLC Automation project by Chia Ying Kuo: an Industry 4.0 instructional system connecting object classification, supervisory mapping, PLC ladder logic, and physical automation.">
+  <title>Machine Vision + PLC Automation | Chia Ying Kuo</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Chia Ying Kuo</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Primary navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="https://github.com/CY-Kuo" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=hWQJ84wAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container project-hero-grid">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="eyebrow">Industrial Automation · Computer Vision · Engineering Education</p>
+      <h1>Machine Vision + PLC Automation</h1>
+      <p class="project-lede">An <strong>Industry 4.0 automation system</strong> that connects real-time machine-vision classification to <strong>PLC-based industrial control</strong>, while making the complete perception-to-control pathway visible and teachable in a hands-on undergraduate laboratory.</p>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Project Overview</p>
+        <h2>From webcam image to physical automation output</h2>
+      </div>
+      <p class="large-copy">The system integrates webcam acquisition, a VB.NET/OpenCvSharp machine-vision application, ML.NET classification, an Excel/VBA supervisory mapping layer, and PLC ladder logic. A predicted object label is converted into a command code that is transferred to the PLC, where discrete outputs are activated through ladder-logic comparisons.</p>
+      <div class="overview-figure">
+        <figure><img src="../assets/media/machine-vision-plc/fig1_system_architecture.png" alt="Machine vision to PLC automation system architecture"><figcaption>End-to-end perception-to-control architecture: webcam → VB.NET classification → Excel/VBA mapping → PLC ladder logic → physical output.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Project Highlights</h2>
+      <div class="highlight-list">
+        <article><h3>Real-time machine vision</h3><p>Captures webcam images and performs object classification through a VB.NET application using OpenCvSharp and ML.NET.</p></article>
+        <article><h3>Supervisory data mapping</h3><p>Maps the predicted class label to a numeric command code through the Excel/VBA supervisory interface.</p></article>
+        <article><h3>PLC integration</h3><p>Transfers the command code into PLC logic, where equality comparisons drive corresponding discrete outputs.</p></article>
+        <article><h3>Transparent system integration</h3><p>Keeps each stage of the perception-to-control pathway visible so students can inspect and troubleshoot the complete workflow.</p></article>
+        <article><h3>Undergraduate laboratory delivery</h3><p>Packages the concept as hands-on instructional material suitable for a four-year undergraduate engineering laboratory curriculum.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Demonstration</p>
+        <h2>Machine vision and integrated automation interfaces</h2>
+      </div>
+      <div class="media-grid one full-media">
+        <figure><img src="../assets/media/machine-vision-plc/fig7_interface_of_realtime_webcam.png" alt="Real-time webcam object classification interface"><figcaption>Real-time webcam interface showing object classification in the VB.NET application.</figcaption></figure>
+        <figure><img src="../assets/media/machine-vision-plc/fig8_interface_of_integrated_module.png" alt="Integrated machine vision, Excel supervisory mapping, and PLC ladder logic interface"><figcaption>Integrated module showing the detected class, supervisory command mapping, and PLC ladder-logic response.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Educational Context</p>
+        <h2>Delivering Industry 4.0 integration as a hands-on undergraduate lab</h2>
+      </div>
+      <p class="large-copy">The project was developed not only as a technical integration exercise, but as a set of instructional materials for teaching how machine vision, machine learning, supervisory software, and PLC control interact in one automation workflow. The laboratory sequence is intended for a four-year undergraduate engineering curriculum and emphasizes implementation, observation, and debugging across system layers.</p>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="container">
+      <h2 class="technology-title">Technologies Used</h2>
+      <div class="technology-cards" aria-label="Technology list">
+        <span>VB.NET</span><span>OpenCvSharp</span><span>ML.NET</span><span>Excel / VBA</span><span>PLC Ladder Logic</span><span>Industrial Automation</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Publication &amp; Materials</h2>
+      <p class="large-copy">The public repository contains the laboratory handouts and source materials used to deliver the machine-vision/PLC integration concept in a hands-on undergraduate laboratory setting.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/CY-Kuo/machine-vision-plc-automation" target="_blank" rel="noreferrer">View GitHub</a>
+        <a class="button" href="https://zenodo.org/records/19869012" target="_blank" rel="noreferrer">View Publication</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-next">
+    <div class="container">
+      <p class="eyebrow">Explore More</p>
+      <div class="next-links">
+        <a href="maps.html"><span>Computer Vision</span><strong>MAPS: Assembly-Part Segmentation →</strong></a>
+        <a href="wireless-sensing.html"><span>Embedded Systems</span><strong>Real-Time Wearable Sensing System →</strong></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-row"><span>© <span data-year></span> Chia Ying Kuo</span><span>Research &amp; engineering portfolio</span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
